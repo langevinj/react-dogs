@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Switch, Redirect } from "react-router-dom"
 import Nav from "./Nav"
 import DogList from "./DogList"
+import DogDetails from "./DogDetails"
 import whiskey from "./whiskey.jpg"
 import tubby from "./tubby.jpg"
 import perry from "./perry.jpg"
@@ -17,6 +18,9 @@ function App(props) {
         <Route exact path="/dogs" >
           <DogList dogInfo={props.dogs}/>
         </Route>
+      <Route path="/dogs/:name">
+        <DogDetails dogs={props.dogs}/>
+      </Route>
       <Redirect to="/dogs" />
     </Switch>
   </div>
