@@ -7,7 +7,7 @@ function DogList(dogInfo){
     return(
         <div className="DogList">
             {dogInfo.dogInfo.map(dog => 
-            (<ul key={uuid}>
+            (<ul key={uuid()}>
                     <Link to={`/dogs/${dog.name}`}><img src={dog.src} className="DogList-img"></img></Link>
                 <li>{dog.name}</li>
                 <li>Age: {dog.age}</li>

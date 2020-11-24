@@ -15,10 +15,10 @@ function App(props) {
   <div className="App">
     <Nav dogs={props.dogs}/>
     <Switch>
-        <Route exact path="/dogs" >
+      <Route exact path="/dogs" >
           <DogList dogInfo={props.dogs}/>
-        </Route>
-      <Route path="/dogs/:name">
+      </Route>
+      <Route exact path="/dogs/:name">
         <DogDetails dogs={props.dogs}/>
       </Route>
       <Redirect to="/dogs" />
